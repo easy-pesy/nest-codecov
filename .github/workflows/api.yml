@@ -23,13 +23,13 @@ jobs:
       run: npm run build
 
     - name: Create test coverage
-    - run: npm run test:cov
+      run: npm run test:cov
 
-    - name: Upload testing reports
-      run: |
-        bash <(curl -s https://codecov.io/bash)
-      env:
-        CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
+    # - name: Upload testing reports
+    #   run: |
+    #     bash <(curl -s https://codecov.io/bash)
+    #   env:
+    #     CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3    
