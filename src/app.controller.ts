@@ -14,4 +14,9 @@ export class AppController {
   ping(): string {
     return 'pong!';
   }
+
+  @Get()
+  health(): string {
+    return 'OK!';
+  }
 }
