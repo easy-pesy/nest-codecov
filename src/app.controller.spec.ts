@@ -19,8 +19,12 @@ describe('AppController', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
 
-    it('should return "Hello World!"', () => {
+    it('should return "pong!"', () => {
       expect(appController.ping()).toBe('pong!');
+    });
+
+    it('should check health', () => {
+      expect(appController.health()).toBe('OK!');
     });
   });
 });
